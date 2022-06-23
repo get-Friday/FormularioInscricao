@@ -22,7 +22,7 @@ public class FichaInscricao
 		)
 	{
 		Nome = nome;
-		Idade = CalcularIdade(dataNascimento);
+		Idade = CalcularIdade(dataNascimento.Year);
 		Curso = curso;
 		Escolaridade = escolaridade;
 		DataNascimento = dataNascimento;
@@ -31,8 +31,8 @@ public class FichaInscricao
 		ValorMulta = valorMulta;
 	}
 
-	private int CalcularIdade(DateTime DataNascimento)
+	private int CalcularIdade(int anoNascimento)
     {
-		return DataNascimento.Year - DateTime.Now.Year;
+		return anoNascimento - DateTime.Now.Year;
     }
 }
