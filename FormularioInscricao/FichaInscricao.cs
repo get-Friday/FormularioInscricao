@@ -36,3 +36,9 @@ public class FichaInscricao
 		return anoNascimento - DateTime.Now.Year;
     }
 }
+public class CobrarCurso
+{
+	private decimal? valorCurso { get; set; }
+	private decimal? valorMulta { get; set; }
+	private decimal? valorDesconto { get; set; }
+}
