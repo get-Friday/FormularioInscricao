@@ -41,4 +41,26 @@ public class CobrarCurso
 	private decimal? valorCurso { get; set; }
 	private decimal? valorMulta { get; set; }
 	private decimal? valorDesconto { get; set; }
+	private decimal? Resultado { get; set; }
+	private void Calculo()
+    {
+		if (valorMulta.HasValue && valorMulta > 0)
+        {
+			Resultado = valorCurso + valorMulta;
+        }
+
+		if (valorMulta.HasValue && valorMulta < 0)
+        {
+			Resultado = valorCurso - valorDesconto;
+        }
+    }
+}
+
+public class CursoSelecionado
+{
+	private List<string> cursos = new List<string>();
+	public CursoSelecionado(string curso)
+    {
+        this.cursos.Add(curso);
+    }
 }
